@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Service\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TaskWebApi.DTO\TaskWebApi.DTO.csproj" />
     <ProjectReference Include="..\TaskWepApi.Extension\TaskWepApi.Extension.csproj" />
   </ItemGroup>

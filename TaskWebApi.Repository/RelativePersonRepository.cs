@@ -9,4 +9,7 @@ internal class RelativePersonRepository : RepositoryBase<RelativePerson>, IRelat
     {
 
     }
+
+    public IEnumerable<RelativePerson> GetAllRelative(int Id)=>
+       _dbSet.Where(a => a.PersonId == Id && a.RelativeToId != 0).ToList();    
 }
