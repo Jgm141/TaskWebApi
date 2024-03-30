@@ -16,10 +16,7 @@ public static class DependencyConfiguration
 
         var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-        builder.Services.AddScoped<ICityService, CityService>();
         builder.Services.AddScoped<IPersonService, PersonService>();
-        builder.Services.AddScoped<IPhoneNumberService, PhoneNumberService>();
-        builder.Services.AddScoped<IRelativePersonService,  RelativePersonService>();
         builder.Services.AddDbContext<TaskWebApiDbContext>(options => options.UseSqlServer(connectionString));
     }
 }
