@@ -1,6 +1,7 @@
 ﻿using TaskWebApi.DTO;
 using Microsoft.EntityFrameworkCore;
 using TaskWebApi.Repository.database.Configuration;
+using TaskWebApi.Service.Interfaces.configure;
 
 namespace TaskWebApi.Repository;
 

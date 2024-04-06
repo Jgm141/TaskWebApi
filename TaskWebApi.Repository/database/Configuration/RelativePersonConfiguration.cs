@@ -6,9 +6,8 @@ namespace TaskWebApi.Repository.database.Configuration;
 
 public class RelativePersonConfiguration : IEntityConfiguration
 {
-    public bool Configure()
+    public bool Configure(ModelBuilder modelBuilder)
     {
-        ModelBuilder modelBuilder = new();
 
         modelBuilder.Entity<RelativePerson>()
             .HasKey(rp => new { rp.PersonId, rp.RelativeToId });

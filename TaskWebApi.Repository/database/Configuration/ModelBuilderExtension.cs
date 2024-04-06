@@ -11,7 +11,9 @@ public static class ModelBuilderExtension
         _ = (
           from t in typeof(IEntityConfiguration).Assembly.GetTypes()
           where configurationType.IsAssignableFrom(t) && !t.IsAbstract
-          select (Activator.CreateInstance(t, modelBuilder) as IEntityConfiguration)?.Configure()
+          select (Activator.CreateInstance(t, modelBuilder) as IEntityConfiguration)?.Configure(modelBuilder)
         ).ToArray();
     }
+
+
 }

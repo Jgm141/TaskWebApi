@@ -6,9 +6,8 @@ namespace TaskWebApi.Repository.database.Configuration;
 
 public class PersonConfiguration : IEntityConfiguration
 {
-    public bool Configure()
+    public bool Configure(ModelBuilder modelBuilder)
     {
-        ModelBuilder modelBuilder = new();
 
         modelBuilder.Entity<Person>()
             .Property(a => a.FirstName)

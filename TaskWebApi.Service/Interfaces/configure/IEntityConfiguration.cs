@@ -1,5 +1,4 @@
-﻿
-namespace TaskWebApi.Service.Interfaces.configure;
+﻿namespace TaskWebApi.Service.Interfaces.configure;
 
 public interface IEntityConfiguration
 {

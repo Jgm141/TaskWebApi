@@ -34,8 +34,15 @@ public class PersonService : IPersonService
         _unitOfWork.PersonRepository.Update(person);
         SaveChanges();
     }
+    public IEnumerable<RelativePerson> GetPresonRelations(int personId) =>  
+           _unitOfWork.RelativePersonRepository.GetAllRelative(personId);
+   
+    public Person GetPerson(int personId) =>  _unitOfWork.PersonRepository.Get(personId);
+
     public void SaveChanges()
     {
         _unitOfWork.SaveChanges();
     }
+
+
 }

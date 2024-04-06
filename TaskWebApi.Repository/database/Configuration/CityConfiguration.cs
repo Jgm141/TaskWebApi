@@ -6,10 +6,8 @@ namespace TaskWebApi.Repository.database.Configuration;
 
 public class CityConfiguration : IEntityConfiguration
 {
-    public bool Configure()
+    public bool Configure(ModelBuilder modelBuilder)
     {
-        ModelBuilder modelBuilder = new();
-
         modelBuilder.Entity<City>()
             .Property(a => a.Name)
             .HasColumnType("nvarchar(20)")

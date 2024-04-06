@@ -7,9 +7,8 @@ namespace TaskWebApi.Repository.database.Configuration;
 
 public class PhoneNumberConfiguration : IEntityConfiguration
 {
-    public bool Configure()
+    public bool Configure(ModelBuilder modelBuilder)
     {
-        ModelBuilder modelBuilder = new();
 
         modelBuilder.Entity<PhoneNumber>()
             .Property(a => a.Number)
